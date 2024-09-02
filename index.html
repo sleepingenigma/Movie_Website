@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/EasePack.min.js" defer ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="movie.js" defer></script>
+    <script src="script.js" defer ></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets\Logo (1).svg" alt="Logo">
+            <h4>Students Web Commitee</h4>
+        </div>
+        <div class="header-right">
+            <i class="fa fa-search search hritems"></i>
+            <input class="search-bar hritems " id="search-input" type="text" placeholder="Search for movies..." >
+            <button class="search-button hritems " >Search</button>
+            <div class="dropdownsearch" id="search-results" style="display: none;">
+            </div>
+        </div>
+    </nav>
+    <div class="mainbody">
+        <div class="unhovered">
+            <a class="mi-item" href="#">
+                <i class="fa fa-search" style="font-size: 1.2vw;" ></i>
+                <div class="text">
+                &nbsp;
+                &nbsp;
+                Search Results
+                </div>
+            </a>
+            <a class="mi-item" href="#">
+                <i class="fa fa-group fa-regular" style="font-size: 1.2vw;" ></i>
+                <div class="text">
+                &nbsp;
+                &nbsp;
+                All Team
+                </div>
+            </a>
+            <a class="mi-item" href="#">
+                <i class="fa fa-object-group" style="font-size: 1.2vw;" ></i>
+                <div class="text">
+                &nbsp;
+                &nbsp;
+                Core Team
+                </div>
+            </a>
+            <a class="mi-item" href="#">
+                <i class="fa fa-github" style="font-size: 1.5vw;" ></i>
+                <div class="text">
+                &nbsp;
+                &nbsp;
+                Developers
+                </div>
+            </a>
+            <a class="mi-item" href="#">
+                <i class="fa fa-telegram" style="font-size: 1.2vw;" ></i>
+                <div class="text">
+                &nbsp;
+                &nbsp;
+                Mentors
+                </div>
+            </a>
+            <button class="add">+ ADD</button>
+        </div>
+        <div class="movies-section">
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-img">
+                    <img class="movie-pic" src="assets\bliss.jpg" alt="Logo">
+                </div>
+                <div class="info">
+                <div class="movie-title">FBI Open up</div>
+                <div class="movie-info">U are under arrest</div>
+                <div class="mainline">
+                    <div class="rating">
+                        10
+                        <i class="fa fa-star star"></i>
+                    </div>
+                    <button class="glow-on-hover" type="button">Details</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="pagination">
+        <div class="page" id="prev">
+            <i class="fa fa-arrow-left"></i>
+        </div>
+        <div class="current" id="current">1</div>
+        <div class="page" id="next">
+            <i class="fa fa-arrow-right" ></i>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="moviestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="movie-details-container">
+        <div class="movieimg">
+            <div class="posterimg">
+                <img src="./assets/bliss.jpg" class="imagemain" alt="">
+            </div>
+            <div class="postertext">
+                Your Name
+            </div>
+            <div class="posteroverview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium numquam soluta illo repellat odio error cupiditate reprehenderit doloribus voluptates debitis!
+            </div>
+        </div>
+        <div class="movie-details">
+            <div style="display: flex;flex-direction: column; gap: 1vw; min-width: 40vw;" >
+                <div class="nittygitty">
+                    <div class="title">Your Name</div>
+                </div>
+                <div class="nittygitty">
+                    <div class="title">Rating:</div>
+                    <div class="rating">10 <i class="fa fa-star star"></i>  </div>
+                </div>
+                <div class="nittygitty">
+                    <div class="title">Genres:</div>
+                    <div class="genres">Romance</div>
+                </div>
+                <div class="nittygitty">
+                    <div class="title">Runtime:</div>
+                    <div class="subtitle">2hrs 52min</div>
+                </div>
+                <div class="nittygitty">
+                    <div class="title">Director:</div>
+                    <div class="subtitle">Makoto Shinkai</div>
+                </div>
+            </div>
+            <div class="description subtitle">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, sed officiis dignissimos libero minus commodi tempora voluptate iusto necessitatibus! Debitis.
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const movieId = urlParams.get('id');
+    console.log(movieId);
+    const apiKey = 'a9f9fd4995ee392c2f9ac09565316350';
+    const IMG_URL = 'https://image.tmdb.org/t/p/w500';
+
+    fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        function redirect() {
+            window.location.href = `${data.homepage}`;
+        }
+        const movieDetailsHTML = `
+        <div class="movieimg" style="background-image: url(${IMG_URL+data.backdrop_path});" >
+            <div class="posterimg">
+                <img src="${IMG_URL + data.poster_path}" class="imagemain" alt="" >
+            </div>
+            <div class="postertext">
+                ${data.title}
+            </div>
+            <div class="posteroverview">
+                ${data.overview.substring(0,200) + '.....'}
+            </div>
+            <div class="language" style="position: absolute;top: 10%;right: 0;display: flex;flex-wrap: wrap;" >
+                ${data.spoken_languages.map((lang) => `<div class="rating">${lang.name}</div>`)}
+            </div>
+        </div>
+        <div class="movie-details">
+            <div style="display: flex;flex-direction: column;gap: 1vw;width: 40vw;" >
+                <div class="nittygitty">
+                    <div class="title" style="font-size: 1.667vw;">${data.original_title}</div>
+                </div>
+                <div class="nittygitty">
+                    <div class="title">Rating:</div>
+                    <div class="rating">${data.vote_average} <i class="fa fa-star star"></i>  </div>
+                </div>
+                <div class="nittygitty">
+                    <div class="title">Genres:</div>
+                    <div style="display: flex; gap: 0.3vw;flex-wrap: wrap;">
+                        ${data.genres.map((genre) => `<div class="genres">${genre.name}</div>`)}
+                    </div>
+                </div>
+                <div class="nittygitty">
+                    <div class="title">Runtime:</div>
+                    <div class="subtitle">${data.runtime} min</div>
+                </div>
+                <div class="nittygitty">
+                    <div class="title">Production Companies:</div>
+                    <div style="display: flex; gap: 0.3vw;flex-wrap: wrap;">
+                        ${data.production_companies.map((comp) => `<div class="subtitle">${comp.name}</div>`)}
+                    </div>
+                </div>
+            </div>
+            <div class="description subtitle">
+                ${data.overview}
+            </div>
+        </div>
+        `;
+
+        const movieDetailsContainer = document.getElementsByClassName('movie-details-container')[0];
+        const poster = document.getElementsByClassName('imagemain')[0];
+        poster.addEventListener('click', () => {console.log("clicked")});
+        movieDetailsContainer.innerHTML = movieDetailsHTML;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+</script>
+</html>
